@@ -1,0 +1,16 @@
+<!--pages/historyList/index.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">历史列表</view>
+</cu-custom>
+<i-spin fix size="large" wx:if="{{loading}}"></i-spin>
+<view wx:if="{{nodata}}" style='margin-top:350rpx;width:100%;text-align:center;'>
+  <image src="/images/nodata.png" style='width:180rpx;height:180rpx;'></image>
+  <view style='color:#999999;font-size:34rpx'>暂无记录</view>
+</view>
+<i-cell-group wx:else>
+  <i-cell wx:for="{{dataInfo}}" wx:key="data" title="{{item.QuestionMenu}}" label="{{item.CreateTime}}" is-link url="/pages/history/history?id={{item.Id}}">
+    
+  </i-cell>
+</i-cell-group>
+

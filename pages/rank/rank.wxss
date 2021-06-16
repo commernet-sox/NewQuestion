@@ -1,0 +1,41 @@
+/* pages/question.wxss */
+.selectIcon{
+  text-align: center;
+  margin: 0 auto;
+  width: 350rpx;
+  height: 500rpx;
+  margin-bottom: 100rpx;
+  padding-top: 180rpx;
+}
+.answer{
+  width:275rpx;
+  height:275rpx;
+}
+.selectQuestionMenu{
+  font-size:30rpx;
+  background-color:#dff8f8;
+  width:400rpx;
+  height:90rpx;
+  margin:0 auto;
+  text-align:center;
+  justify-content:center;
+  display:flex;
+  align-items:center;
+  color:#4dbbb5;
+  margin-bottom:80rpx;
+
+}
+.start{
+  font-size: 30rpx;
+  background-color: #2db7f5;
+  width: 250rpx;
+  height: 80rpx;
+  border-radius: 100rpx;
+  color: #ffffff;
+  margin: 0 auto;
+  text-align: center;
+  justify-content:center;
+  display:flex;
+  align-items:center;
+  
+}

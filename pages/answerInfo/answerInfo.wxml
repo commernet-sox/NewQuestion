@@ -1,0 +1,26 @@
+<!--pages/answerInfo/index.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">温馨提示</view>
+</cu-custom>
+
+<view style='padding-top:30px;'>
+  <view class='content css-shadow'>
+    <view class="flex">
+      <view class="flex-sub  padding-sm margin-xs radius">选择题库</view>
+      <view class="flex-sub  padding-sm margin-xs radius">{{questionMenu}}</view>
+    </view>
+    <view class="flex  p-xs margin-bottom-sm mb-sm">
+      <view class="flex-sub  padding-sm margin-xs radius">答题标准</view>
+      <view class="flex-sub  padding-sm margin-xs radius">{{questionNum}}题，{{time}}分钟</view>
+    </view>
+  </view>
+  <view class='tips'>
+    <text>
+    {{tips}}
+    </text>
+  </view>
+  <view class='startAnswer' bindtap='start'>
+    开始答题
+  </view>
+</view>
