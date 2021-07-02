@@ -1,0 +1,61 @@
+<!--pages/faceTest/faceTest.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">颜值测试</view>
+</cu-custom>
+<view>
+  <image mode="widthFix" src="{{uploadImg}}" bindtap="choseImg" style="width:100%"></image>
+  <button class="i-btn i-btn-small i-btn-primary i-btn-circle" hover-class="i-btn-hover" bindtap="submit">测一测颜值</button>
+</view>
+<view class='tips' style="display:{{showRes}}">
+  <view class="padding bg-white solid-bottom">
+    <view class="cu-capsule round">
+      <view class="cu-tag bg-blue ">
+        脸型：
+      </view>
+      <view class="cu-tag line-blue">
+        {{face.Data.lianxing}}
+      </view>
+    </view>
+    <view class="cu-capsule round">
+      <view class="cu-tag bg-blue ">
+        相貌评分：
+      </view>
+      <view class="cu-tag line-blue">
+        {{face.Data.xiangmao}}
+      </view>
+    </view>
+    <view class="cu-capsule round">
+      <view class="cu-tag bg-blue ">
+        年龄：
+      </view>
+      <view class="cu-tag line-blue">
+        {{face.Data.nianling}}
+      </view>
+    </view>
+  </view>
+  <view class="cu-card article ">
+    <view class="cu-item shadow">
+      <view class="title">
+        <view class="text-cut">三庭分析</view>
+      </view>
+      <view class="content">
+        <view class="desc">
+          <view class="text-content" style="height: auto;white-space: pre-wrap;"> 三庭指脸的长度比例，把脸的长度分为三个等分，从前额发际线至眉骨为上庭，从眉骨至鼻底为中庭，从鼻底至下颏为下庭，各占脸长的1/3。\n您的中庭与下庭比为:{{face.Data.santingbi}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-card article ">
+    <view class="cu-item shadow">
+      <view class="title">
+        <view class="text-cut">五眼分析</view>
+      </view>
+      <view class="content">
+        <view class="desc">
+          <view class="text-content" style="height: auto;white-space: pre-wrap;"> 指脸的宽度比例，以眼形长度为单位，把脸的宽度分成五个等分，从左侧发际至右侧发际，为五只眼形。两只眼睛之间有一只眼睛的间距，两眼外侧至侧发际各为一只眼睛的间距，各占比例的1/5。将左眼比例固定为1，现在科学研究最佳黄金比例为: 0.80:1:1.20:1:0.80 \n您的五眼比例为:{{face.Data.wuyanbi}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

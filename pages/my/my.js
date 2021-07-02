@@ -27,9 +27,11 @@ Page({
    */
   onLoad: function (options) {
     var _this = this;
+    
     if (wx.getUserProfile) {
       this.setData({
-        canIUseGetUserProfile: true
+        canIUseGetUserProfile: true,
+        userInfo:{avatarUrl:app.globalData.avatarUrl,nickName:app.globalData.nickName}
       })
       // app.getLoginInfo(function (data) {
       //   console.log('login')

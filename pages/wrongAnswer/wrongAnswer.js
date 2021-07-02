@@ -32,7 +32,7 @@ Page({
       },
       data: {
         MenuId:menu,
-        UserId:0,
+        UserId:app.globalData.userId,
         sessionId:app.globalData.sessionId
       },
       async: true,

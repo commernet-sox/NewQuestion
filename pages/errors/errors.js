@@ -65,13 +65,13 @@ Page({
       },
       data: {
         MenuId:menu,
-        UserId:0,
+        UserId:app.globalData.userId,
         sessionId:app.globalData.sessionId
       },
       async: true,
       success: function (res) {
         console.log(res.data)
-        if(res.data.length!=0)
+        if(res.data!=null)
         {
           wx.navigateTo({
             url: '/pages/wrongAnswer/wrongAnswer?menu='+menu,

@@ -1,3 +1,6 @@
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">错题</view>
+</cu-custom>
 <view>
   <view class='selectIcon'>
     <image src='/images/error.png' class='answer'></image>

@@ -26,7 +26,7 @@ Page({
         'content-type': 'application/x-www-form-urlencoded'
       },
       data: {
-        UserId:0,
+        UserId:app.globalData.userId,
         sessionId:app.globalData.sessionId
       },
       async: true,

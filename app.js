@@ -37,26 +37,35 @@ App({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         //发起网络请求
-        wx.request({
-          method:'POST',
-          url: _this._server+'/WxOpen/onLogin',
-          header: { 'content-type': 'application/x-www-form-urlencoded' },
-          data: {
-            code: res.code
-          },
-          success:function(res){
-            console.log(res.data)
-            if(res.data.success)
-            {
-              _this.saveCache("sessionId", res.data.sessionId);
-              _this.saveCache("status", res.data.operation);
-              _this.saveCache("expireTime", res.data.expireTime);
-              _this.globalData.sessionId = res.data.sessionId; 
-              _this.globalData.status = res.data.operation;
-              _this.globalData.expireTime = res.data.expireTime;
+        console.log(res.code)
+        setTimeout(function () {
+          wx.request({
+            method:'POST',
+            url: _this._server+'/WxOpen/onLogin',
+            async:false,
+            header: { 'content-type': 'application/x-www-form-urlencoded' },
+            data: {
+              code: res.code
+            },
+            success:function(res){
+              console.log(res.data)
+              if(res.data.success)
+              {
+                _this.saveCache("sessionId", res.data.sessionId);
+                _this.saveCache("status", res.data.operation);
+                _this.saveCache("expireTime", res.data.expireTime);
+                _this.globalData.sessionId = res.data.sessionId; 
+                _this.globalData.status = res.data.operation;
+                _this.globalData.expireTime = res.data.expireTime;
+                _this.globalData.userId=res.data.UserId;
+                _this.globalData.isPhone=res.data.IsPhone;
+                _this.globalData.nickName=res.data.NickName;
+                _this.globalData.avatarUrl=res.data.AvatarUrl
+              }
             }
-          }
-        })
+          })
+        },2000)
+        
       }
     })
   },
@@ -96,22 +105,28 @@ App({
     })
   },
   cache: {},
-  _server: "http://10.27.9.154:5000",
-
+  //_server: "http://10.27.9.154:5000",
+  _server: "https://zjshow.cn:8003",
+  //_server: "http://47.98.229.13:8003",
   //应用全局数据
   globalData: {
     //微信数据
     userInfo: null,
     sessionId: null,
-    //员工工号
-    employeeId:null,
+    //用户id
+    userId:'',
     //状态
     status:null,
     //账号集合
     employeeList:[],
     //过期时间
     expireTime:null,
-    //是否是组长
-    isMaster:null
+    //是否存在手机号
+    isPhone:'',
+    //昵称
+    nickName:'',
+    //用户头像
+    avatarUrl:''
+
   },
 })

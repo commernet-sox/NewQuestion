@@ -13,9 +13,9 @@ module.exports.sub = sub;
   <scroll-view class='messScroll' scroll-y bindscrolltolower="lower" bindscrolltolower="getBottom">
     <view class='rankList' wx:for="{{rankList}}" bindtap='showDetail' data-index="{{index}}">
       <view class="item">
-        <image class="userPhoto" src="{{item.user.avatarUrl}}" />
+        <image class="userPhoto" src="{{item.AvatarUrl}}" />
         <view class='middle'>
-          {{util.sub(item.UserId)}}****
+          {{util.sub(item.NickName)}}****
         </view>
         <view class='score'>
           {{item.Score}}

@@ -1,3 +1,6 @@
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">答题</view>
+</cu-custom>
 <view>
   <view class='selectIcon'>
     <image src='/images/select.png' class='answer'></image>
@@ -10,4 +13,6 @@
   <view class='start' bindtap='startAnswer' wx:if="{{isLogin && isPhone}}">
     开始答题
   </view>
+  <button class="start"  bindtap="getUserProfile" wx:if="{{!isLogin && isPhone}}">点击授权</button>
+  <button class="start"  open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" wx:if="{{isLogin && !isPhone}}">授权手机号</button>
 </view>

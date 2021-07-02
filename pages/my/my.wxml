@@ -1,4 +1,7 @@
 <!--pages/my/index.wxml-->
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">我的</view>
+</cu-custom>
 <view class="header">
   <i-row>
     <i-col span="20" i-class="col-class">
@@ -31,4 +34,7 @@
   <i-cell title="关于我们" bind:click="about">
     <i-icon type="addressbook" color="#2db7f5" slot="icon" size='18' />
   </i-cell>
+  <!-- <i-cell title="颜值测试" is-link url="/pages/faceTest/faceTest">
+    <i-icon type="picture" color="#2db7f5" slot="icon" size='18' />
+  </i-cell> -->
 </i-cell-group>

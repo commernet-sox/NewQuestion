@@ -1,0 +1,17 @@
+/* pages/faceTest/faceTest.wxss */
+.tips {
+  line-height: 25px;
+  font-size: 15px;
+  color: #aaa;
+  padding:0 40rpx;
+
+}
+.content {
+  margin: 0 20px;
+  border-radius: 5px;
+}
+.css-shadow{
+  -moz-box-shadow:2px 2px 10px #2db7f5; 
+  -webkit-box-shadow:2px 2px 10px #2db7f5; 
+  box-shadow:2px 2px 10px #2db7f5;
+}

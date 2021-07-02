@@ -59,7 +59,8 @@ Page({
       },
       data: {
         Content:content,
-        Phone:phoneNum
+        Phone:phoneNum,
+        UserId:app.globalData.userId
       },
       async: true,
       success: function (res) {

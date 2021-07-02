@@ -14,7 +14,8 @@
     "pages/rankList/rankList",
     "pages/my/my",
     "pages/historyList/historyList",
-    "pages/feedBack/feedBack"
+    "pages/feedBack/feedBack",
+    "pages/faceTest/faceTest"
   ],
   "window": {
     "backgroundTextStyle": "light",

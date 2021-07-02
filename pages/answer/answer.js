@@ -369,7 +369,8 @@ Page({
         QuestionMenu:questionMenu,
         MenuId:menu,
         Score:score,
-        sessionId:app.globalData.sessionId
+        sessionId:app.globalData.sessionId,
+        UserId:app.globalData.userId
       },
       async: true,
       success: function (res) {
@@ -409,7 +410,8 @@ Page({
         QuestionListObj: err,
         QuestionMenu:questionMenu,
         MenuId:menu,
-        sessionId:app.globalData.sessionId
+        sessionId:app.globalData.sessionId,
+        UserId:app.globalData.userId
       },
       async: true,
       success: function (res) {

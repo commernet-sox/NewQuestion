@@ -1,4 +1,7 @@
 <!--pages/rank/index.wxml-->
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">排名</view>
+</cu-custom>
 <view>
   <view class='selectIcon'>
     <image src='/images/rank.png' class='answer'></image>
